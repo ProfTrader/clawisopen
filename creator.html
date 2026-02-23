@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creator — Claw Is Open</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<nav>
+  <div class="nav-wrap">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-mark">✦</div>
+      Claw Is Open
+    </a>
+    <div class="nav-center">
+      <a href="marketplace.html">Browse</a>
+      <a href="marketplace.html#categories">Categories</a>
+      <a href="creators.html">Creators</a>
+      <a href="index.html#how">How it works</a>
+      <a href="blog.html">Blog</a>
+    </div>
+    <div class="nav-right">
+      <a href="signin.html" class="btn btn-ghost">Log in</a>
+      <a href="signup.html" class="btn btn-dark">Sign up free</a>
+    </div>
+  </div>
+</nav>
+
+<section class="creator-profile">
+  <div class="container">
+    <div class="breadcrumb" style="margin-bottom: 24px;">
+      <a href="index.html">Home</a> / <a href="creators.html">Creators</a> / <span id="creator-handle">@alexr_builds</span>
+    </div>
+    <div class="creator-header">
+      <div class="cr-avatar" id="creator-avatar">🧑‍💻</div>
+      <div>
+        <h1 id="creator-name" style="font-size: 28px; margin-bottom: 6px;">Alex Rivera</h1>
+        <p id="creator-handle-p" style="font-size: 16px; color: var(--ink-4); margin-bottom: 16px;">@alexr_builds</p>
+        <p id="creator-bio" style="font-size: 15px; color: var(--ink-3); line-height: 1.6; max-width: 480px;">
+          Full-stack developer turned AI builder. Specializes in business strategy and developer tooling personas.
+        </p>
+      </div>
+    </div>
+    <div class="cr-stats" style="max-width: 400px; margin-bottom: 48px;">
+      <div class="cr-stat"><span class="v" id="stat-listings">48</span><span class="k">listings</span></div>
+      <div class="cr-stat"><span class="v" id="stat-downloads">24k</span><span class="k">downloads</span></div>
+      <div class="cr-stat"><span class="v" id="stat-rating">4.9★</span><span class="k">rating</span></div>
+    </div>
+    <div class="s-head">
+      <div class="s-label">Listings</div>
+      <h2 class="s-title">From this <em>creator</em></h2>
+    </div>
+    <div class="persona-grid" id="creator-listings">
+      <a href="product.html?id=startup-strategist" class="p-card">
+        <div class="p-card-top">
+          <div class="p-icon p-icon-green">🚀</div>
+          <span class="p-price free">Free</span>
+        </div>
+        <span class="badge badge-neutral" style="margin-bottom:10px;">Business</span>
+        <h3>Startup Strategist</h3>
+        <p>Your on-demand co-founder. Business plans, investor pitches, market analysis.</p>
+        <div class="p-card-foot">
+          <div class="p-stars"><span class="star">★</span><span class="val">4.9</span></div>
+          <span class="p-dl">8,412 downloads</span>
+        </div>
+      </a>
+      <a href="product.html?id=senior-dev-buddy" class="p-card">
+        <div class="p-card-top">
+          <div class="p-icon p-icon-gray">💻</div>
+          <span class="p-price">$49</span>
+        </div>
+        <span class="badge badge-neutral" style="margin-bottom:10px;">Coding</span>
+        <h3>Senior Dev Buddy</h3>
+        <p>Full-stack engineer with 10 years of knowledge. Reviews code, writes tests.</p>
+        <div class="p-card-foot">
+          <div class="p-stars"><span class="star">★</span><span class="val">5.0</span></div>
+          <span class="p-dl">12,304 downloads</span>
+        </div>
+      </a>
+      <a href="product.html?id=contract-reviewer" class="p-card">
+        <div class="p-card-top">
+          <div class="p-icon p-icon-gray">⚖️</div>
+          <span class="p-price">$99</span>
+        </div>
+        <span class="badge badge-neutral" style="margin-bottom:10px;">Legal</span>
+        <h3>Contract Reviewer</h3>
+        <p>Flags risks in contracts, explains legal jargon, drafts NDAs.</p>
+        <div class="p-card-foot">
+          <div class="p-stars"><span class="star">★</span><span class="val">4.6</span></div>
+          <span class="p-dl">3,527 downloads</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom">
+      <p>© 2026 Claw Is Open. All rights reserved.</p>
+      <p>Built for the AI-native web.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var params = new URLSearchParams(location.search);
+  var handle = params.get('handle') || 'alexr_builds';
+  var creators = {
+    'alexr_builds': { name: 'Alex Rivera', avatar: '🧑‍💻', bio: 'Full-stack developer turned AI builder. Specializes in business strategy and developer tooling personas.', listings: '48', downloads: '24k', rating: '4.9★' },
+    'priya_ai': { name: 'Priya Nair', avatar: '👩‍🔬', bio: 'AI researcher with a background in NLP. Creates research, education, and data analysis assistants.', listings: '31', downloads: '18k', rating: '5.0★' },
+    'mcole_craft': { name: 'Marcus Cole', avatar: '🧙', bio: 'Brand strategist and creative director. Known for content, copywriting, and marketing AI personas.', listings: '22', downloads: '11k', rating: '4.8★' },
+    'sam_dev': { name: 'Sam Chen', avatar: '👨‍💼', bio: 'Product manager and automation expert. Builds personas for sales, support, and workflow automation.', listings: '19', downloads: '9k', rating: '4.7★' },
+    'jay_ai': { name: 'Jay Patel', avatar: '🎯', bio: 'Data scientist focused on analytics and reporting assistants. Specializes in SQL, Python, and visualization skills.', listings: '27', downloads: '14k', rating: '4.9★' },
+    'river_creates': { name: 'River Kim', avatar: '✨', bio: 'Writer and editor. Creates personas for copywriting, storytelling, and content strategy.', listings: '15', downloads: '6k', rating: '5.0★' }
+  };
+  var c = creators[handle] || creators['alexr_builds'];
+  var handleStr = '@' + handle;
+  document.getElementById('creator-handle').textContent = handleStr;
+  document.getElementById('creator-name').textContent = c.name;
+  document.getElementById('creator-handle-p').textContent = handleStr;
+  document.getElementById('creator-avatar').textContent = c.avatar;
+  document.getElementById('creator-bio').textContent = c.bio;
+  document.getElementById('stat-listings').textContent = c.listings;
+  document.getElementById('stat-downloads').textContent = c.downloads;
+  document.getElementById('stat-rating').textContent = c.rating;
+  document.title = c.name + ' — Claw Is Open';
+})();
+</script>
+</body>
+</html>

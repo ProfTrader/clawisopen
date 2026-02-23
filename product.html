@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product — Claw Is Open</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<nav>
+  <div class="nav-wrap">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-mark">✦</div>
+      Claw Is Open
+    </a>
+    <div class="nav-center">
+      <a href="marketplace.html">Browse</a>
+      <a href="marketplace.html#categories">Categories</a>
+      <a href="creators.html">Creators</a>
+      <a href="index.html#how">How it works</a>
+      <a href="blog.html">Blog</a>
+    </div>
+    <div class="nav-right">
+      <a href="signin.html" class="btn btn-ghost">Log in</a>
+      <a href="signup.html" class="btn btn-dark">Sign up free</a>
+    </div>
+  </div>
+</nav>
+
+<section class="product-detail">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a> / <a href="marketplace.html">Marketplace</a> / <span id="breadcrumb-type">AI Persona</span> / <span id="breadcrumb-name">Startup Strategist</span>
+    </div>
+    <div class="product-hero">
+      <div class="product-main">
+        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 20px;">
+          <div class="p-icon p-icon-green" id="product-icon">🚀</div>
+          <span class="badge badge-neutral" id="product-category">Business</span>
+        </div>
+        <h1 id="product-title">Startup Strategist</h1>
+        <div class="product-meta">
+          <span>★ <strong id="product-rating">4.9</strong></span>
+          <span id="product-downloads">8,412 downloads</span>
+          <span>by <a href="creator.html?handle=alexr_builds" id="product-creator-link">Alex Rivera</a></span>
+        </div>
+        <p id="product-desc" style="font-size: 16px; line-height: 1.7; margin-top: 24px;">
+          Your on-demand co-founder. Business plans, investor pitches, market analysis, and go-to-market strategy. Built by domain experts for startups and small teams.
+        </p>
+        <div style="margin-top: 32px;">
+          <a href="checkout.html" class="btn btn-accent btn-lg" id="product-cta">Get free</a>
+          <a href="marketplace.html" class="btn btn-ghost btn-lg" style="margin-left: 10px;">Back to marketplace</a>
+        </div>
+      </div>
+      <div style="background: var(--bg-2); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 32px;">
+        <div class="card-price-tag" style="font-size: 28px; margin-bottom: 8px;" id="product-price">Free</div>
+        <p style="font-size: 13px; color: var(--ink-4); margin-bottom: 20px;">One-time. No subscription. Yours forever.</p>
+        <ul style="list-style: none; font-size: 14px; color: var(--ink-3);">
+          <li style="margin-bottom: 10px;">✓ Instant delivery</li>
+          <li style="margin-bottom: 10px;">✓ Full system prompt &amp; config</li>
+          <li style="margin-bottom: 10px;">✓ 30-day refund guarantee</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom">
+      <p>© 2026 Claw Is Open. All rights reserved.</p>
+      <p>Built for the AI-native web.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var params = new URLSearchParams(location.search);
+  var id = params.get('id') || 'startup-strategist';
+  var products = {
+    'startup-strategist': { name: 'Startup Strategist', type: 'Persona', category: 'Business', price: 'Free', priceNum: 0, icon: '🚀', rating: '4.9', downloads: '8,412', creator: 'Alex Rivera', handle: 'alexr_builds', desc: 'Your on-demand co-founder. Business plans, investor pitches, market analysis, and go-to-market strategy. Built by domain experts for startups and small teams.' },
+    'content-machine-pro': { name: 'Content Machine Pro', type: 'Persona', category: 'Content', price: '$29', priceNum: 29, icon: '✍️', rating: '4.8', downloads: '6,103', creator: 'Marcus Cole', handle: 'mcole_craft', desc: 'Viral blog posts, engaging social copy, and SEO-optimized articles at scale in your brand voice.' },
+    'senior-dev-buddy': { name: 'Senior Dev Buddy', type: 'Persona', category: 'Coding', price: '$49', priceNum: 49, icon: '💻', rating: '5.0', downloads: '12,304', creator: 'Alex Rivera', handle: 'alexr_builds', desc: 'Full-stack engineer with 10 years of knowledge. Reviews code, writes tests, explains architecture.' },
+    'growth-hacker-ai': { name: 'Growth Hacker AI', type: 'Persona', category: 'Marketing', price: '$39', priceNum: 39, icon: '📈', rating: '4.7', downloads: '5,801', creator: 'Marcus Cole', handle: 'mcole_craft', desc: 'Data-driven marketing expert. A/B tests, funnel optimization, paid ads strategy, and conversion copy.' },
+    'creative-director': { name: 'Creative Director', type: 'Persona', category: 'Design', price: 'Free', priceNum: 0, icon: '🎨', rating: '4.8', downloads: '7,219', creator: 'River Kim', handle: 'river_creates', desc: 'Art direction, brand identity, UI/UX critique, design briefs, and creative storytelling expertise.' },
+    'contract-reviewer': { name: 'Contract Reviewer', type: 'Persona', category: 'Legal', price: '$99', priceNum: 99, icon: '⚖️', rating: '4.6', downloads: '3,527', creator: 'Alex Rivera', handle: 'alexr_builds', desc: 'Flags risks in contracts, explains legal jargon, and drafts NDAs and simple agreements. Not legal advice.' },
+    'agentic-coding-loop': { name: 'Agentic Coding Loop', type: 'Skill', category: 'Coding', price: 'Free', priceNum: 0, icon: '🔁', rating: '4.9', downloads: '9,100', creator: 'Alex Rivera', handle: 'alexr_builds', desc: 'Autonomous code → test → fix cycles with no intervention. Snap onto any assistant.' },
+    'youtube-researcher': { name: 'YouTube Researcher', type: 'Skill', category: 'Research', price: '$12', priceNum: 12, icon: '📺', rating: '4.7', downloads: '4,200', creator: 'Priya Nair', handle: 'priya_ai', desc: 'Search, summarize and extract key insights from videos.' },
+    'seo-automator': { name: 'SEO Automator', type: 'Skill', category: 'Marketing', price: '$19', priceNum: 19, icon: '🔍', rating: '4.8', downloads: '5,500', creator: 'Marcus Cole', handle: 'mcole_craft', desc: 'Keyword research, competitor analysis, on-page optimization.' },
+    'data-visualizer': { name: 'Data Visualizer', type: 'Skill', category: 'Analytics', price: 'Free', priceNum: 0, icon: '📊', rating: '5.0', downloads: '6,800', creator: 'Priya Nair', handle: 'priya_ai', desc: 'Turn raw CSV or JSON data into clear charts and narratives.' },
+    'email-automator': { name: 'Email Automator', type: 'Skill', category: 'Marketing', price: '$15', priceNum: 15, icon: '✉️', rating: '4.6', downloads: '3,900', creator: 'Marcus Cole', handle: 'mcole_craft', desc: 'Cold outreach, smart follow-ups, and full drip sequences.' },
+    'web-scraper-pro': { name: 'Web Scraper Pro', type: 'Skill', category: 'Research', price: '$24', priceNum: 24, icon: '🌐', rating: '4.8', downloads: '4,100', creator: 'Sam Chen', handle: 'sam_dev', desc: 'Extract and structure data from any public webpage.' }
+  };
+  var p = products[id] || products['startup-strategist'];
+  document.getElementById('breadcrumb-type').textContent = 'AI ' + p.type;
+  document.getElementById('breadcrumb-name').textContent = p.name;
+  document.getElementById('product-title').textContent = p.name;
+  document.getElementById('product-icon').textContent = p.icon;
+  document.getElementById('product-icon').className = 'p-icon ' + (p.priceNum === 0 ? 'p-icon-green' : 'p-icon-warm');
+  document.getElementById('product-category').textContent = p.category;
+  document.getElementById('product-price').textContent = p.price;
+  document.getElementById('product-rating').textContent = p.rating;
+  document.getElementById('product-downloads').textContent = p.downloads + ' downloads';
+  document.getElementById('product-creator-link').textContent = p.creator;
+  document.getElementById('product-creator-link').href = 'creator.html?handle=' + p.handle;
+  document.getElementById('product-desc').textContent = p.desc;
+  document.getElementById('product-cta').textContent = p.priceNum === 0 ? 'Get free' : 'Add to cart — ' + p.price;
+  document.title = p.name + ' — Claw Is Open';
+})();
+</script>
+</body>
+</html>

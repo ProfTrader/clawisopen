@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout — Claw Is Open</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<nav>
+  <div class="nav-wrap">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-mark">✦</div>
+      Claw Is Open
+    </a>
+    <div class="nav-center">
+      <a href="marketplace.html">Browse</a>
+      <a href="marketplace.html#categories">Categories</a>
+      <a href="creators.html">Creators</a>
+      <a href="index.html#how">How it works</a>
+      <a href="blog.html">Blog</a>
+    </div>
+    <div class="nav-right">
+      <a href="signin.html" class="btn btn-ghost">Log in</a>
+      <a href="signup.html" class="btn btn-dark">Sign up free</a>
+    </div>
+  </div>
+</nav>
+
+<section class="checkout-section">
+  <div class="container" style="max-width: 640px;">
+    <div class="s-head">
+      <div class="s-label">Checkout</div>
+      <h2 class="s-title">Review your order</h2>
+      <p class="s-sub">Secure payment via Stripe. Instant delivery after purchase.</p>
+    </div>
+    <div class="cart-item">
+      <div class="p-icon p-icon-green" style="flex-shrink:0;">🚀</div>
+      <div class="cart-item-info">
+        <h3 style="font-size: 16px; margin-bottom: 4px;">Startup Strategist</h3>
+        <p style="font-size: 13px; color: var(--ink-4); margin: 0;">AI Persona · Business</p>
+      </div>
+      <div class="cart-item-price">Free</div>
+    </div>
+    <div class="cart-item">
+      <div class="p-icon p-icon-warm" style="flex-shrink:0;">✍️</div>
+      <div class="cart-item-info">
+        <h3 style="font-size: 16px; margin-bottom: 4px;">Content Machine Pro</h3>
+        <p style="font-size: 13px; color: var(--ink-4); margin: 0;">AI Persona · Content</p>
+      </div>
+      <div class="cart-item-price">$29</div>
+    </div>
+    <div class="checkout-total">
+      Total: <span id="checkout-total">$29</span>
+    </div>
+    <form onsubmit="event.preventDefault(); alert('Thank you! This is a demo. In production, Stripe would process the payment.'); window.location.href='marketplace.html';" style="margin-top: 32px;">
+      <div class="form-group">
+        <label for="card">Card number</label>
+        <input type="text" id="card" placeholder="4242 4242 4242 4242" maxlength="19" />
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+        <div class="form-group">
+          <label for="exp">Expiry</label>
+          <input type="text" id="exp" placeholder="MM / YY" />
+        </div>
+        <div class="form-group">
+          <label for="cvc">CVC</label>
+          <input type="text" id="cvc" placeholder="123" />
+        </div>
+      </div>
+      <button type="submit" class="btn btn-accent btn-lg" style="width: 100%; margin-top: 24px;">Pay with card</button>
+    </form>
+    <p style="text-align: center; margin-top: 24px;">
+      <a href="marketplace.html" class="btn btn-ghost">Continue shopping</a>
+    </p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom">
+      <p>© 2026 Claw Is Open. All rights reserved.</p>
+      <p>Built for the AI-native web.</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
