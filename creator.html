@@ -54,47 +54,7 @@
       <div class="s-label">Listings</div>
       <h2 class="s-title">From this <em>creator</em></h2>
     </div>
-    <div class="persona-grid" id="creator-listings">
-      <a href="product.html?id=startup-strategist" class="p-card">
-        <div class="p-card-top">
-          <div class="p-icon p-icon-green">🚀</div>
-          <span class="p-price free">Free</span>
-        </div>
-        <span class="badge badge-neutral" style="margin-bottom:10px;">Business</span>
-        <h3>Startup Strategist</h3>
-        <p>Your on-demand co-founder. Business plans, investor pitches, market analysis.</p>
-        <div class="p-card-foot">
-          <div class="p-stars"><span class="star">★</span><span class="val">4.9</span></div>
-          <span class="p-dl">8,412 downloads</span>
-        </div>
-      </a>
-      <a href="product.html?id=senior-dev-buddy" class="p-card">
-        <div class="p-card-top">
-          <div class="p-icon p-icon-gray">💻</div>
-          <span class="p-price">$49</span>
-        </div>
-        <span class="badge badge-neutral" style="margin-bottom:10px;">Coding</span>
-        <h3>Senior Dev Buddy</h3>
-        <p>Full-stack engineer with 10 years of knowledge. Reviews code, writes tests.</p>
-        <div class="p-card-foot">
-          <div class="p-stars"><span class="star">★</span><span class="val">5.0</span></div>
-          <span class="p-dl">12,304 downloads</span>
-        </div>
-      </a>
-      <a href="product.html?id=contract-reviewer" class="p-card">
-        <div class="p-card-top">
-          <div class="p-icon p-icon-gray">⚖️</div>
-          <span class="p-price">$99</span>
-        </div>
-        <span class="badge badge-neutral" style="margin-bottom:10px;">Legal</span>
-        <h3>Contract Reviewer</h3>
-        <p>Flags risks in contracts, explains legal jargon, drafts NDAs.</p>
-        <div class="p-card-foot">
-          <div class="p-stars"><span class="star">★</span><span class="val">4.6</span></div>
-          <span class="p-dl">3,527 downloads</span>
-        </div>
-      </a>
-    </div>
+    <div class="persona-grid" id="creator-listings"></div>
   </div>
 </section>
 
@@ -119,6 +79,29 @@
     'jay_ai': { name: 'Jay Patel', avatar: '🎯', bio: 'Data scientist focused on analytics and reporting assistants. Specializes in SQL, Python, and visualization skills.', listings: '27', downloads: '14k', rating: '4.9★' },
     'river_creates': { name: 'River Kim', avatar: '✨', bio: 'Writer and editor. Creates personas for copywriting, storytelling, and content strategy.', listings: '15', downloads: '6k', rating: '5.0★' }
   };
+  var creatorProductIds = {
+    'alexr_builds': ['startup-strategist', 'senior-dev-buddy', 'contract-reviewer', 'agentic-coding-loop'],
+    'priya_ai': ['youtube-researcher', 'data-visualizer'],
+    'mcole_craft': ['content-machine-pro', 'growth-hacker-ai', 'seo-automator', 'email-automator'],
+    'sam_dev': ['web-scraper-pro'],
+    'jay_ai': [],
+    'river_creates': ['creative-director']
+  };
+  var products = {
+    'startup-strategist': { name: 'Startup Strategist', category: 'Business', price: 'Free', priceClass: 'free', icon: '🚀', iconClass: 'p-icon-green', rating: '4.9', downloads: '8,412', desc: 'Your on-demand co-founder. Business plans, investor pitches, market analysis.' },
+    'content-machine-pro': { name: 'Content Machine Pro', category: 'Content', price: '$29', priceClass: '', icon: '✍️', iconClass: 'p-icon-warm', rating: '4.8', downloads: '6,103', desc: 'Viral blog posts, engaging social copy, and SEO-optimized articles at scale.' },
+    'senior-dev-buddy': { name: 'Senior Dev Buddy', category: 'Coding', price: '$49', priceClass: '', icon: '💻', iconClass: 'p-icon-gray', rating: '5.0', downloads: '12,304', desc: 'Full-stack engineer with 10 years of knowledge. Reviews code, writes tests.' },
+    'growth-hacker-ai': { name: 'Growth Hacker AI', category: 'Marketing', price: '$39', priceClass: '', icon: '📈', iconClass: 'p-icon-green', rating: '4.7', downloads: '5,801', desc: 'Data-driven marketing expert. A/B tests, funnel optimization, conversion copy.' },
+    'creative-director': { name: 'Creative Director', category: 'Design', price: 'Free', priceClass: 'free', icon: '🎨', iconClass: 'p-icon-warm', rating: '4.8', downloads: '7,219', desc: 'Art direction, brand identity, UI/UX critique, design briefs.' },
+    'contract-reviewer': { name: 'Contract Reviewer', category: 'Legal', price: '$99', priceClass: '', icon: '⚖️', iconClass: 'p-icon-gray', rating: '4.6', downloads: '3,527', desc: 'Flags risks in contracts, explains legal jargon, drafts NDAs.' },
+    'agentic-coding-loop': { name: 'Agentic Coding Loop', category: 'Coding', price: 'Free', priceClass: 'free', icon: '🔁', iconClass: 'p-icon-green', rating: '4.9', downloads: '9,100', desc: 'Autonomous code → test → fix cycles with no intervention.' },
+    'youtube-researcher': { name: 'YouTube Researcher', category: 'Research', price: '$12', priceClass: '', icon: '📺', iconClass: 'p-icon-warm', rating: '4.7', downloads: '4,200', desc: 'Search, summarize and extract key insights from videos.' },
+    'seo-automator': { name: 'SEO Automator', category: 'Marketing', price: '$19', priceClass: '', icon: '🔍', iconClass: 'p-icon-gray', rating: '4.8', downloads: '5,500', desc: 'Keyword research, competitor analysis, on-page optimization.' },
+    'data-visualizer': { name: 'Data Visualizer', category: 'Analytics', price: 'Free', priceClass: 'free', icon: '📊', iconClass: 'p-icon-green', rating: '5.0', downloads: '6,800', desc: 'Turn raw CSV or JSON data into clear charts and narratives.' },
+    'email-automator': { name: 'Email Automator', category: 'Marketing', price: '$15', priceClass: '', icon: '✉️', iconClass: 'p-icon-warm', rating: '4.6', downloads: '3,900', desc: 'Cold outreach, smart follow-ups, and full drip sequences.' },
+    'web-scraper-pro': { name: 'Web Scraper Pro', category: 'Research', price: '$24', priceClass: '', icon: '🌐', iconClass: 'p-icon-warm', rating: '4.8', downloads: '4,100', desc: 'Extract and structure data from any public webpage.' }
+  };
+  function escapeHtml(s) { var d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
   var c = creators[handle] || creators['alexr_builds'];
   var handleStr = '@' + handle;
   document.getElementById('creator-handle').textContent = handleStr;
@@ -130,6 +113,21 @@
   document.getElementById('stat-downloads').textContent = c.downloads;
   document.getElementById('stat-rating').textContent = c.rating;
   document.title = c.name + ' — Claw Is Open';
+  var ids = creatorProductIds[handle] || [];
+  var listingEl = document.getElementById('creator-listings');
+  if (ids.length === 0) {
+    listingEl.innerHTML = '<p style="grid-column: 1 / -1; color: var(--ink-3);">No listings yet from this creator.</p>';
+  } else {
+    listingEl.innerHTML = ids.map(function(id) {
+      var p = products[id];
+      if (!p) return '';
+      return '<a href="product.html?id=' + encodeURIComponent(id) + '" class="p-card">' +
+        '<div class="p-card-top"><div class="p-icon ' + p.iconClass + '">' + p.icon + '</div><span class="p-price ' + p.priceClass + '">' + escapeHtml(p.price) + '</span></div>' +
+        '<span class="badge badge-neutral" style="margin-bottom:10px;">' + escapeHtml(p.category) + '</span>' +
+        '<h3>' + escapeHtml(p.name) + '</h3><p>' + escapeHtml(p.desc) + '</p>' +
+        '<div class="p-card-foot"><div class="p-stars"><span class="star">★</span><span class="val">' + escapeHtml(p.rating) + '</span></div><span class="p-dl">' + escapeHtml(p.downloads) + ' downloads</span></div></a>';
+    }).join('');
+  }
 })();
 </script>
 </body>

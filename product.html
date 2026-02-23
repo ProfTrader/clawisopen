@@ -109,6 +109,7 @@
   document.getElementById('product-creator-link').href = 'creator.html?handle=' + p.handle;
   document.getElementById('product-desc').textContent = p.desc;
   document.getElementById('product-cta').textContent = p.priceNum === 0 ? 'Get free' : 'Add to cart — ' + p.price;
+  document.getElementById('product-cta').href = 'checkout.html?item=' + encodeURIComponent(id);
   document.title = p.name + ' — Claw Is Open';
 })();
 </script>
